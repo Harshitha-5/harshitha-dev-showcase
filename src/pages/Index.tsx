@@ -577,17 +577,17 @@ const Index = () => {
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="bg-teal-600 rounded-full p-3">
-                    <Globe className="h-5 w-5 text-white" />
+                    <Code className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-slate-400">Portfolio</p>
+                    <p className="text-slate-400">LeetCode</p>
                     <a 
-                      href="https://harshitha-codecraft-folio.lovable.app" 
+                      href="https://leetcode.com/u/Harshitha-55/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:text-blue-300 transition-colors"
                     >
-                      harshitha-codecraft-folio.lovable.app
+                      leetcode.com/u/Harshitha-55
                     </a>
                   </div>
                 </div>
