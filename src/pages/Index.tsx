@@ -238,7 +238,7 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="animate-fade-in">
             <Avatar className="w-32 h-32 mx-auto mb-8 ring-4 ring-blue-400 ring-offset-4 ring-offset-slate-900">
-              <AvatarImage src={harshithaProfile} alt="Harshitha Muli" />
+              <AvatarImage src="/lovable-uploads/1cf8a0af-6a57-4601-8287-309eda9fdaf5.png" alt="Harshitha Muli" className="object-cover" />
               <AvatarFallback className="text-2xl bg-gradient-to-br from-blue-500 to-purple-600">HM</AvatarFallback>
             </Avatar>
             <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-teal-400 bg-clip-text text-transparent">
