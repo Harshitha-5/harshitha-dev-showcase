@@ -595,30 +595,52 @@ const Index = () => {
             </div>
             <Card className="bg-slate-800/50 border-slate-700 p-8">
               <h3 className="text-xl font-semibold text-white mb-6">Send Message</h3>
-              <form className="space-y-6">
+              <form 
+                className="space-y-6"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const formData = new FormData(e.target as HTMLFormElement);
+                  const name = formData.get('name') as string;
+                  const email = formData.get('email') as string;
+                  const subject = formData.get('subject') as string;
+                  const message = formData.get('message') as string;
+                  
+                  // Create mailto link with form data
+                  const mailtoLink = `mailto:harshitha2229995@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+                  window.location.href = mailtoLink;
+                }}
+              >
                 <div>
                   <Input 
+                    name="name"
                     placeholder="Your Name" 
+                    required
                     className="bg-slate-700 border-slate-600 text-white placeholder:text-slate-400"
                   />
                 </div>
                 <div>
                   <Input 
+                    name="email"
                     type="email" 
                     placeholder="Your Email" 
+                    required
                     className="bg-slate-700 border-slate-600 text-white placeholder:text-slate-400"
                   />
                 </div>
                 <div>
                   <Input 
+                    name="subject"
                     placeholder="Subject" 
+                    required
                     className="bg-slate-700 border-slate-600 text-white placeholder:text-slate-400"
                   />
                 </div>
                 <div>
                   <Textarea 
+                    name="message"
                     placeholder="Your Message" 
                     rows={5}
+                    required
                     className="bg-slate-700 border-slate-600 text-white placeholder:text-slate-400"
                   />
                 </div>
